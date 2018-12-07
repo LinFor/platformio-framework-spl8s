@@ -2750,7 +2750,7 @@ CFG_TypeDef;
  #define trap()                {__asm__("trap\n");} /* Trap (soft IT) */
  #define wfi()                 {__asm__("wfi\n");}  /* Wait For Interrupt */
  #define halt() {__asm__("halt\n");} /* Halt */
-#else /*_IAR_*/
+#elif defined(_IAR_)
  #include <intrinsics.h>
  #define enableInterrupts()    __enable_interrupt()   /* enable interrupts */
  #define disableInterrupts()   __disable_interrupt()  /* disable interrupts */
